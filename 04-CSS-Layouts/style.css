@@ -1,0 +1,335 @@
+* {
+  /* color: red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: blue; */
+  color: #444;
+  font-family: sans-serif;
+  /* position: relative; */
+}
+
+.container {
+  width: 1200px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /* height: 80px; */
+
+  /* position: relative; */
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+
+  /* padding-top: 50px; */
+  /* padding-bottom: 50px; */
+  padding: 50px 40px;
+  /* width: 500px; */
+}
+
+/* SMALLER ELEMENTS */
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.post-header {
+  margin-bottom: 40px;
+  /* position: relative; */
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-size: 18px;
+  font-style: italic;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* body {
+  background-color: aqua;
+} */
+
+/* li:nth-child(even) {
+  color: red;
+} */
+article p:last-child {
+  /* color: red; */
+}
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* 
+Prio when resolving conflicting declarations from high to lower:
+!important
+inline style
+ID (#) selector - if multiple last selector in code applies
+Class and pseudo class (.) - if multiple last selector in code applies
+Element selector (p, div, li, etc) - if multiple last selector in code applies
+Universal selector (*) - if multiple last selector in code applies
+
+More:
+In the cascade, rules are considered in this order:
+
+Origin + importance: User-origin !important rules win first, then author !important, then normal author rules, then normal user rules, then browser defaults.
+Specificity among rules in the same bucket: inline styles (highest), then selectors with more IDs, then class/pseudo-class/attribute selectors, then element/pseudo-element selectors, with the universal selector at the bottom.
+
+Source order: if two rules still tie, the one that appears later in the stylesheet (or in the later stylesheet) wins.
+
+Inheritance only fills in properties that aren’t explicitly set on an element after the cascade runs, so once a rule gives an element a color, children won’t fall back to an ancestor’s value unless they remain unset themselves.
+
+*/
+
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+} */
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+
+  display: block; */
+
+  /* background-color: orangered;
+  padding: 20px; */
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 10px;
+  cursor: pointer;
+
+  position: absolute;
+
+  /* top: 0;
+  left: 0; */
+
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h3 + p::first-line {
+  /* `h3 +` - it's JSON sibling selector */
+  color: black;
+}
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  /* margin-bottom: 10px; */
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  /* padding-left: 80px; */
+
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+
+  /* background-color: cyan; */
+}
+
+h1 {
+  /* background-color: green; */
+  float: left;
+}
+
+nav {
+  /* background-color: yellow; */
+  float: right;
+}
+
+/* .clear {
+  clear: both;
+} */
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+article {
+  /* background-color: green; */
+  width: 825px;
+  float: left;
+}
+
+aside {
+  background-color: lightgray;
+  width: 300px;
+  float: right;
+}
+
+footer {
+  /* background-color: blue; */
+  clear: both;
+}
